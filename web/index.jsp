@@ -1,4 +1,3 @@
-
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
@@ -46,6 +45,11 @@
             <jsp:param name="precio_producto" value="1,300" />
             <jsp:param name="imagen_producto" value="img/monitor.jpg" />
         </jsp:include>
+        
+        <div style="text-align:center; margin-top: 30px;">
+            <input type="button" class="button" value="Mostrar Integrantes"
+                   onclick="window.location='${pageContext.request.contextPath}/integrantes.html'">
+        </div>
         
         <div style="text-align:center; margin-top: 30px;">
             <input type="button" class="button" value="Mostrar Integrantes"
