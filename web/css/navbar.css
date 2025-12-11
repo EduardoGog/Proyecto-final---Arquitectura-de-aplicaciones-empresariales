@@ -36,3 +36,15 @@ nav a:hover {
   background: #06c8d9;
   border-color: #06c8d9;
 }
+
+/* Logo */
+.nav-logo-right {
+  position: absolute;
+  top: 8px;     
+  right: 20px;  
+}
+
+.nav-logo-right img {
+  height: 45px;  
+  width: auto;
+}
