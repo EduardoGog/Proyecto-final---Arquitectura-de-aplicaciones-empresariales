@@ -25,6 +25,10 @@
             <jsp:param name="hobbie3_alumno2" value="Escuchar música" />
             <jsp:param name="hobbie4_alumno2" value="Programar" />
         </jsp:include>
+        
+        <div style="text-align:center; margin-top: 30px;">
+            <input type="button" class="button" value="Mostrar Integrantes"
+                   onclick="window.location='${pageContext.request.contextPath}/integrantes.html'">
+        </div>
     </body>
 </html>
-
