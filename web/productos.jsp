@@ -13,7 +13,6 @@
         <link rel="stylesheet" href="css/navbar.css">
     </head>
     <body>
-        <!-- Barra de navegación incluida solo en la página principal -->
         <h1>Productos electrónicos</h1>
         <h2>Producto 1</h2>
         <ul>

@@ -1,1 +1,26 @@
+    /* Estilos de la pagina de inicio */
+	body {
+		font-family: Arial, sans-serif;
+		background: url('../img/fondo.png') no-repeat center center fixed;
+		background-size: cover;
+		margin: 0;
+		padding: 0;
+		position: relative;
+	}
+
+	.overlay {
+		position: fixed;
+		top: 60px;
+		left: 0;
+		width: 100vw;
+		height: calc(100vh - 60px);
+		background: rgba(40, 40, 40, 0.5);
+		z-index: 0;
+	}
+
+	main {
+		position: relative;
+		z-index: 1;
+		color: #f1f1f1;
+	}
     

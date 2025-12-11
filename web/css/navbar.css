@@ -9,6 +9,7 @@ nav {
   transform: translateX(-50%);
   box-sizing: border-box;
   top: 0;
+  z-index: 2;
 }
 
 body {

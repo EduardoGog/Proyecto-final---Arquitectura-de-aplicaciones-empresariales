@@ -10,7 +10,8 @@
     </head>
     <body>
         <%@ include file="navbar.jsp" %>
-        <main style="padding:2em;text-align:center;">
+        <div class="overlay"></div>
+        <main style="padding:2em;text-align:center;" class="main">
             <h1>Bienvenido al Proyecto Final</h1>
             <p>Esta es la página de inicio de la aplicación web.<br>
             Usa la barra de navegación para explorar los productos y otras secciones.</p>
