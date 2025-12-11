@@ -14,13 +14,25 @@
     </head>
     <body>
         <h1>Productos electrónicos</h1>
-        <h2>Producto 1</h2>
-        <ul>
-            <li>Nombre: <%=request.getParameter("nombre_producto") %></li>
-            <li>Tipo: <%=request.getParameter("tipo_producto") %></li>
-            <li>Descripcion: <%=request.getParameter("descripcion_producto") %></li>
-            <li>Precio: <%=request.getParameter("precio_producto") %></li>
-            <img src="<%=request.getParameter("imagen_producto") %>" width="500" height="300">
-        </ul>
+        <%-- Mostrar hasta 5 productos si existen los parámetros --%>
+        <% for (int i = 1; i <= 5; i++) {
+            String nombre = request.getParameter("nombre_producto" + i);
+            String tipo = request.getParameter("tipo_producto" + i);
+            String descripcion = request.getParameter("descripcion_producto" + i);
+            String precio = request.getParameter("precio_producto" + i);
+            String imagen = request.getParameter("imagen_producto" + i);
+            if (nombre != null && !nombre.isEmpty()) { %>
+                <h2>Producto <%=i%></h2>
+                <ul>
+                    <li>Nombre: <%=nombre%></li>
+                    <li>Tipo: <%=tipo%></li>
+                    <li>Descripcion: <%=descripcion%></li>
+                    <li>Precio: <%=precio%></li>
+                    <% if (imagen != null && !imagen.isEmpty()) { %>
+                        <img src="<%=imagen.startsWith("/") ? imagen.substring(1) : imagen %>" width="500" height="300">
+                    <% } %>
+                </ul>
+        <%  }
+        } %>
     </body>
 </html>
