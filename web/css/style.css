@@ -22,4 +22,40 @@ main {
   z-index: 1;
   color: #f1f1f1;
 }
+
+/* Estilos para la tabla de integrantes */
+.titulo-integrantes {
+  text-align: center;
+  color: #093151;
+  margin-top: 40px;
+  font-size: 5em;
+  letter-spacing: 2px;
+}
+table {
+  margin: 40px auto;
+  border-collapse: collapse;
+  width: 60%;
+  background: rgba(255,255,255,0.85);
+  box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+}
+th, td {
+  padding: 12px 18px;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+  font-size: 1.1em;
+}
+th {
+  background: #2c3e50;
+  color: #fff;
+}
+tr:hover {
+  background: #e0e0e0;
+}
+h1 {
+  text-align: center;
+  color: #2c3e50;
+  margin-top: 40px;
+  font-size: 2.2em;
+  letter-spacing: 2px;
+}
     
