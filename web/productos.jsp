@@ -13,11 +13,14 @@
         <body>
             <h1>Productos electrónicos</h1>
             <%-- Mostrar hasta 5 productos si existen los parámetros --%>
-                <% for (int i=1; i <=5; i++) { String nombre=request.getParameter("nombre_producto" + i); String
-                    tipo=request.getParameter("tipo_producto" + i); String
-                    descripcion=request.getParameter("descripcion_producto" + i); String
-                    precio=request.getParameter("precio_producto" + i); String
-                    imagen=request.getParameter("imagen_producto" + i); if (nombre !=null && !nombre.isEmpty()) { %>
+                <% for (int i=1; i <=5; i++) {
+                    String nombre=request.getParameter("nombre_producto" + i);
+                    String tipo=request.getParameter("tipo_producto" + i);
+                    String descripcion=request.getParameter("descripcion_producto" + i);
+                    String precio=request.getParameter("precio_producto" + i);
+                    String imagen=request.getParameter("imagen_producto" + i);
+                    String idProducto=request.getParameter("id_producto" + i);
+                    if (nombre !=null && !nombre.isEmpty()) { %>
                     <div class="producto-card">
                         <h2>Producto <%=i%>
                         </h2>
@@ -40,7 +43,7 @@
                             <%=nombre%>">
                                 <% } %>
                                     <form action="agregarResena.jsp" method="GET">
-                                        <input type="hidden" name="id" value="<%=i%>">
+                                        <input type="hidden" name="id" value="<%=idProducto != null && !idProducto.isEmpty() ? idProducto : i %>">
                                         <button type="submit">Agregar reseña</button>
                                     </form>
                     </div>

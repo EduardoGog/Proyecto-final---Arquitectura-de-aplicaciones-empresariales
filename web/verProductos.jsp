@@ -13,6 +13,7 @@
         <%@ include file="navbar.jsp" %>
             <h1>Lista de Productos</h1>
             <jsp:include page="productos.jsp">
+                <jsp:param name="id_producto1" value="LAPTOP-GIGA-X16" />
                 <jsp:param name="nombre_producto1" value="GIGABYTE Laptop Gamer Aero X16" />
                 <jsp:param name="tipo_producto1" value="Laptop" />
                 <jsp:param name="descripcion_producto1"
@@ -21,6 +22,7 @@
                 <jsp:param name="imagen_producto1" value="img/laptop_gigabyte.jpg" />
                 
 
+                <jsp:param name="id_producto2" value="PI5-ARM-8GB" />
                 <jsp:param name="nombre_producto2" value="Raspberry Pi 5" />
                 <jsp:param name="tipo_producto2" value="Microcomputadora" />
                 <jsp:param name="descripcion_producto2"
@@ -28,6 +30,7 @@
                 <jsp:param name="precio_producto2" value="3,999" />
                 <jsp:param name="imagen_producto2" value="img/raspberry.jpg" />
 
+                <jsp:param name="id_producto3" value="LOGI-G203-RGB" />
                 <jsp:param name="nombre_producto3" value="Logitech G203 LIGHTSYNC" />
                 <jsp:param name="tipo_producto3" value="Mouse" />
                 <jsp:param name="descripcion_producto3"
@@ -35,6 +38,7 @@
                 <jsp:param name="precio_producto3" value="400" />
                 <jsp:param name="imagen_producto3" value="img/mouse_logitech.jpg" />
 
+                <jsp:param name="id_producto4" value="FWOLF-M96-BT" />
                 <jsp:param name="nombre_producto4" value="Free wolf M96" />
                 <jsp:param name="tipo_producto4" value="Teclado" />
                 <jsp:param name="descripcion_producto4"
@@ -42,6 +46,7 @@
                 <jsp:param name="precio_producto4" value="799" />
                 <jsp:param name="imagen_producto4" value="img/teclado.jpg" />
 
+                <jsp:param name="id_producto5" value="SZORY-MON-15" />
                 <jsp:param name="nombre_producto5" value="Szory Monitor portátil" />
                 <jsp:param name="tipo_producto5" value="Monitor" />
                 <jsp:param name="descripcion_producto5"
