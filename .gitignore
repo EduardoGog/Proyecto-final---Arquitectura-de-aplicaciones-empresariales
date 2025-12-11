@@ -1,3 +1,7 @@
+<<<<<<< HEAD
 .DS_Store
 src/.DS_Store
 web/.DS_Store
+=======
+/build/
+>>>>>>> be089ac28e695dea5e1013ca97f3dbd66291a68f

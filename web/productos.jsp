@@ -10,10 +10,12 @@
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <title>Proyecto final</title>
+        <link rel="stylesheet" href="css/navbar.css">
     </head>
     <body>
-        <h1>Datos de alumnos de Ingeniería en computación</h1>
-        <h2>Alumno 1</h2>
+        <!-- Barra de navegación incluida solo en la página principal -->
+        <h1>Productos electrónicos</h1>
+        <h2>Producto 1</h2>
         <ul>
             <li>Nombre: <%=request.getParameter("nombre_producto") %></li>
             <li>Tipo: <%=request.getParameter("tipo_producto") %></li>
