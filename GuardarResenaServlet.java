@@ -3,6 +3,7 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/JSP_Servlet/Servlet.java to edit this template
  */
 
+import java.io.FileWriter;
 import java.io.IOException;
 import java.io.PrintWriter;
 import javax.servlet.ServletException;
@@ -30,17 +31,32 @@ public class GuardarResenaServlet extends HttpServlet {
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         response.setContentType("text/html;charset=UTF-8");
-        try (PrintWriter out = response.getWriter()) {
-            /* TODO output your page here. You may use following sample code. */
-            out.println("<!DOCTYPE html>");
-            out.println("<html>");
-            out.println("<head>");
-            out.println("<title>Servlet GuardarResenaServlet</title>");
-            out.println("</head>");
-            out.println("<body>");
-            out.println("<h1>Servlet GuardarResenaServlet at " + request.getContextPath() + "</h1>");
-            out.println("</body>");
-            out.println("</html>");
+        String idProducto = request.getParameter("id");
+        String resena = request.getParameter("resena");
+        String calificacion = request.getParameter("calificacion");
+        String FILE_PATH = "resenas.csv"; // Ruta del archivo CSV
+        
+        FileWriter fw = null;
+        PrintWriter pw = null;
+
+        try {
+            // true = append (agregar al final del archivo)
+            fw = new FileWriter(FILE_PATH, true);
+            pw = new PrintWriter(fw);
+
+            // Reemplaza comas en la reseña para no romper el CSV
+            String resenaLimpia = resena.replace(",", ";");
+
+            // Formato CSV: id,resena,calificacion
+            pw.println(idProducto + "," + resenaLimpia + "," + calificacion);
+
+            System.out.println("Reseña guardada exitosamente en resenas.csv");
+
+        } catch (IOException e) {
+            System.err.println("Error guardando reseña en CSV: " + e.getMessage());
+        } finally {
+            try { if (pw != null) pw.close(); } catch (Exception ex) {}
+            try { if (fw != null) fw.close(); } catch (Exception ex) {}
         }
     }
 
