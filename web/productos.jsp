@@ -16,14 +16,11 @@
         <h1>Productos electrónicos</h1>
         <h2>Producto 1</h2>
         <ul>
-            <li>Nombre: <%=request.getParameter("nombre_alumno") %></li>
-            <li>Matrícula: <%=request.getParameter("matricula_alumno") %></li>
-            <li>Edad: <%=request.getParameter("edad_alumno") %></li>
-            <li>Licenciatura: <%=request.getParameter("lic_alumno") %></li>
-            <li>Hobbie 1: <%=request.getParameter("hobbie_alumno") %></li>
-            <li>Hobbie 2: <%=request.getParameter("hobbie2_alumno") %></li>
-            <li>Hobbie 3: <%=request.getParameter("hobbie3_alumno") %></li>
-            <li>Hobbie 4: <%=request.getParameter("hobbie4_alumno") %></li>
+            <li>Nombre: <%=request.getParameter("nombre_producto") %></li>
+            <li>Tipo: <%=request.getParameter("tipo_producto") %></li>
+            <li>Descripcion: <%=request.getParameter("descripcion_producto") %></li>
+            <li>Precio: <%=request.getParameter("precio_producto") %></li>
+            <img src="<%=request.getParameter("imagen_producto") %>" width="500" height="300">
         </ul>
     </body>
 </html>
