@@ -22,16 +22,18 @@
             String precio = request.getParameter("precio_producto" + i);
             String imagen = request.getParameter("imagen_producto" + i);
             if (nombre != null && !nombre.isEmpty()) { %>
-                <h2>Producto <%=i%></h2>
-                <ul>
-                    <li>Nombre: <%=nombre%></li>
-                    <li>Tipo: <%=tipo%></li>
-                    <li>Descripcion: <%=descripcion%></li>
-                    <li>Precio: <%=precio%></li>
+                <div class="producto-card">
+                    <h2>Producto <%=i%></h2>
+                    <ul>
+                        <li><strong>Nombre:</strong> <%=nombre%></li>
+                        <li><strong>Tipo:</strong> <%=tipo%></li>
+                        <li><strong>Descripcion:</strong> <%=descripcion%></li>
+                        <li><strong>Precio:</strong> <%=precio%></li>
+                    </ul>
                     <% if (imagen != null && !imagen.isEmpty()) { %>
-                        <img src="<%=imagen.startsWith("/") ? imagen.substring(1) : imagen %>" width="500" height="300">
+                        <img src="<%=imagen.startsWith("/") ? imagen.substring(1) : imagen %>" alt="Imagen de <%=nombre%>">
                     <% } %>
-                </ul>
+                </div>
         <%  }
         } %>
     </body>
