@@ -17,12 +17,34 @@ body {
   padding: 0;
 }
 nav a {
-  color: #fff;
+  color: #2c3e50;
   margin-right: 1em;
   text-decoration: none;
   font-weight: bold;
-  transition: color 0.2s;
+  font-size: 1.25em;
+  letter-spacing: 1px;
+  transition: color 0.2s, background 0.2s;
+  background: #eaf2fb;
+  padding: 0.7em 1.6em;
+  border-radius: 8px;
+  border: 2px solid #06c8d9;
+  box-shadow: 0 2px 8px rgba(44,62,80,0.08);
+  display: inline-block;
 }
 nav a:hover {
-  color: #ffc107;
+  color: #fff;
+  background: #06c8d9;
+  border-color: #06c8d9;
+}
+
+/* Logo */
+.nav-logo-right {
+  position: absolute;
+  top: 8px;     
+  right: 20px;  
+}
+
+.nav-logo-right img {
+  height: 45px;  
+  width: auto;
 }

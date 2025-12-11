@@ -16,7 +16,6 @@
             Usa la barra de navegación para explorar los productos y otras secciones.</p>
         </main>
         
-        
         <div style="text-align:center; margin-top: 30px;">
             <input type="button" class="button" value="Mostrar Integrantes"
                    onclick="window.location='${pageContext.request.contextPath}/integrantes.html'">
